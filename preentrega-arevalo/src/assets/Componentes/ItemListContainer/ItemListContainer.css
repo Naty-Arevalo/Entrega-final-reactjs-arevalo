@@ -1,0 +1,6 @@
+.div-itemContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+}
