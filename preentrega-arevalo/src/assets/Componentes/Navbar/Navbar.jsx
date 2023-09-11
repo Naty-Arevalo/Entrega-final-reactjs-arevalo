@@ -5,7 +5,8 @@ import CardWidget from "../CardWidget/CardWidget";
 
 const Navbar = () =>{
 
-    return( <AppBar>
+    return(  <>
+    <AppBar>
     
         <Toolbar className="Tollbar-navbar" sx= {{backgroundColor: "#775110", display: "flex", justifyContent: "space-around"}}>
             <Typography sx= {{color:"black"}}>
@@ -26,7 +27,7 @@ const Navbar = () =>{
     </AppBar> 
 
 
-     )
+    </>)
 
 }
 
