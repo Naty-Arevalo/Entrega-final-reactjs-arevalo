@@ -2,6 +2,7 @@ import { AppBar, Button, Toolbar } from "@mui/material";
 import { Typography } from '@mui/material';
 import './Navbar.css';
 import CardWidget from "../CardWidget/CardWidget";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () =>{
 
@@ -12,14 +13,17 @@ const Navbar = () =>{
             <Typography sx= {{color:"black"}}>
                 Aluminé Conciencia Bio
             </Typography>
-            <Button className="Button-navbar" sx={{color: "black"}}>
+            <Button className="Button-navbar" component={NavLink} to="/home" sx={{color: "black"}}>
                 Home
             </Button>
             
-            <Button className="Button-navbar" sx={{color: "black"}}>
+            <Button className="Button-navbar" component={NavLink} to="/" sx={{color: "black"}}>
                 Productos
             </Button >
-            <Button className="Button-navbar" sx={{color: "black"}}>
+            <Button className="Button-navbar" component={NavLink} to="/categories" sx={{color: "black"}}>
+                Categorias
+            </Button>
+            <Button className="Button-navbar" component={NavLink} to="/contacto" sx={{color: "black"}}>
                 Contacto
             </Button>
             <CardWidget />

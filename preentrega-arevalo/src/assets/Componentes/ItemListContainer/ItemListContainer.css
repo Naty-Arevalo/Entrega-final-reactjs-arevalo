@@ -1,6 +1,23 @@
 .div-itemContainer{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 100px;
+  
+    margin-top: 70px;
+    background-color:#7f5a1a;
+    
+     
+}
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-block: 16px;
+    align-items: center;
+    justify-items: center;
+}
+.productos-title{
+    color: #775200;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+    padding: 10px;
 }

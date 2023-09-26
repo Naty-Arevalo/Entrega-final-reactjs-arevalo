@@ -1,0 +1,68 @@
+[
+    {
+        "id":1,
+        "nombre":"Sahumerio Hierbas- Lavanda y Olívano ",
+        "category": "Linea-Hierbas",
+        "img": "/img-sahumerios/sahumerio-lavanda.png",
+        "uso":"1 hora",
+        "composicion":"Lavanda en flor, olívano (incienso especial), carbón natural, aglutinante a base de plantas",
+        "accion": "",
+        "precio":100
+
+    },
+    {
+        "id":2,
+        "nombre":"Sahumerio natural- Mirra",
+        "category": "Sahumerios-Naturales",
+        "img": "/img-sahumerios/sahumerio-mirra.png",
+        "uso":"1 hora",
+        "composicion":"Resina de Mirra (Mediterráneo), carbón natural, aglutinante natural",
+        "accion": "",
+        "precio":100
+
+    },
+    {
+        "id":3,
+        "nombre":"Sahumerio de Palo Santo Sustentable",
+        "category": "Linea-Sahumerios-Palo-Santo",
+        "img": "/img-sahumerios/sahumerio-palo-santo.png",
+        "uso":"1 hora",
+        "composicion":"Madera de palo santo (peruano),Sandalo (india), aglutinante natural",
+        "accion": "",
+        "precio": 100
+
+    },
+    {
+        "id":4,
+        "nombre":"Sahumerio Natural- Sándalo y Olíbano",
+        "category": "Sahumerios-Naturales",
+        "img": "/img-sahumerios/sahumerio-sandalo.png",
+        "uso":"1 hora",
+        "composicion":"Sándalo en polvo, aceite esencial concentrado de sándalo, resina de olíbano y aglutinante natural",
+        "accion": "",
+        "precio": 100
+
+    },
+    {
+        "id":5,
+        "nombre":"Sahumerio Triangular Sagrada Geometría",
+        "category": "Linea-Sahumerios-Triangulares",
+        "img": "/img-sahumerios/sahumerio-triangular.png",
+        "uso":"Como un sahumerio o para defumación",
+        "composicion":"Sándalo polvo de india, hierbas, aglutinante natural, carbón vegetal",
+        "accion": "",
+        "precio": 200
+
+    },
+    {
+        "id":6,
+        "nombre":"Sahumerio En Polvo- Yagra con Madera Oriente",
+        "category": "Sahumerios-En-Polvo",
+        "img": "/img-sahumerios/sahumerio-en-polvo.png",
+        "uso":"Para sahumar o defumar",
+        "composicion":"Aceite concentrado aromático, aceites esenciales, harina de madera, hierbas, sal",
+        "accion": "",
+        "precio": 200
+
+    }
+]

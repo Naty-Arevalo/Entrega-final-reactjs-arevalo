@@ -1,0 +1,19 @@
+.categorias{
+    background-color: #775200;
+    margin-top: 20vh;
+}
+.categ-title{
+    color: #775200;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+    padding: 10px;
+}
+.categ-link{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    text-align: center;
+
+}
