@@ -1,0 +1,23 @@
+.div-container{
+    margin-top: 70px;
+    background-color:#7f5a1a;
+}
+.detalle-title{
+    color: #775200;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+    padding: 10px;
+}
+.div-detalle{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    align-items: center;
+    width: 80%;
+    height: 300px;
+}
+.img-detalle{
+    width: 300px;
+}

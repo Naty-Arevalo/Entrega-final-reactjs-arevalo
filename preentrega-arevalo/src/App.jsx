@@ -6,6 +6,7 @@ import Categories from './assets/Componentes/categories/Categories'
 
 import CategoriesProductList from './assets/Componentes/CategoriesProductList/CategoriesProductList'
 import Home from './assets/Componentes/Home/Home'
+import ProductDetail from './assets/Componentes/ProductDetail/ProductDetail'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/home" element={<Home/>}/>
         <Route exaxt path="/" element={<ItemListContainer/>} />
+        <Route exact path="/producto/:id" element={<ProductDetail/>}/>
         <Route exact path="/categories/" element= {<Categories/>}/>
         <Route exact path= "categories/:categoryId" element={<CategoriesProductList/>}/>
       </Routes>
