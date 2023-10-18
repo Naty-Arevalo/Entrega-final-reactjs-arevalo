@@ -26,7 +26,8 @@ const Navbar = () =>{
             <Button className="Button-navbar" component={NavLink} to="/contacto" sx={{color: "black"}}>
                 Contacto
             </Button>
-            <CardWidget />
+            <NavLink to="/cart"><CardWidget /></NavLink>
+            
         </Toolbar>
     </AppBar> 
 

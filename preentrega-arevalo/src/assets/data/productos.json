@@ -7,7 +7,8 @@
         "uso":"1 hora",
         "composicion":"Lavanda en flor, olívano (incienso especial), carbón natural, aglutinante a base de plantas",
         "accion": "",
-        "precio":100
+        "precio":100,
+        "stock": 5
 
     },
     {
@@ -18,7 +19,8 @@
         "uso":"1 hora",
         "composicion":"Resina de Mirra (Mediterráneo), carbón natural, aglutinante natural",
         "accion": "",
-        "precio":100
+        "precio":100,
+        "stock": 5
 
     },
     {
@@ -29,7 +31,8 @@
         "uso":"1 hora",
         "composicion":"Madera de palo santo (peruano),Sandalo (india), aglutinante natural",
         "accion": "",
-        "precio": 100
+        "precio": 100,
+        "stock": 5
 
     },
     {
@@ -40,18 +43,20 @@
         "uso":"1 hora",
         "composicion":"Sándalo en polvo, aceite esencial concentrado de sándalo, resina de olíbano y aglutinante natural",
         "accion": "",
-        "precio": 100
+        "precio": 100,
+        "stock": 5
 
     },
     {
         "id":5,
         "nombre":"Sahumerio Triangular Sagrada Geometría",
         "category": "Linea-Sahumerios-Triangulares",
-        "img": "/img-sahumerios/sahumerio-triangular.png",
+        "img": "/img-sahumerios/sahumerio-triangular",
         "uso":"Como un sahumerio o para defumación",
         "composicion":"Sándalo polvo de india, hierbas, aglutinante natural, carbón vegetal",
         "accion": "",
-        "precio": 200
+        "precio": 200,
+        "stock": 5
 
     },
     {
@@ -62,7 +67,8 @@
         "uso":"Para sahumar o defumar",
         "composicion":"Aceite concentrado aromático, aceites esenciales, harina de madera, hierbas, sal",
         "accion": "",
-        "precio": 200
+        "precio": 200,
+        "stock": 5
 
     }
 ]

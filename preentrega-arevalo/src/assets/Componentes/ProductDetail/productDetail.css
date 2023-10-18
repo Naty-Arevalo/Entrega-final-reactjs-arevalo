@@ -15,9 +15,34 @@
     flex-direction: row;
     justify-content:space-between ;
     align-items: center;
+    /* margin-top: 100px; */
     width: 80%;
     height: 300px;
 }
+.div-miniDetalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    font-size: 20px;
+    
+}
 .img-detalle{
-    width: 300px;
+    width:250px;
+
+}
+.contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 30px;
+
+}
+.descripcion{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-style: italic;
+    padding: 30px;
 }

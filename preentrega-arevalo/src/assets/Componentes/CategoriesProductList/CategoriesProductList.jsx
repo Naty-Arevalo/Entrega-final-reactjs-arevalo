@@ -1,24 +1,32 @@
 import { useParams } from "react-router-dom";
-import productos from "../../data/productos.json"
-import PedirDatos from "../../hooks/PedirDatos";
-import ItemList from "../ItemListContainer/itemList/ItemList";
 import "./categoriesProductList.css"
+import { useEffect, useState } from "react";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import ItemList from "../ItemListContainer/itemList/ItemList";
 
 
 const CategoriesProductList = () => {
-    const{categoryId}=useParams()
-
-    const {data}= PedirDatos(productos)
-
-    const categorySelected = data.filter(category =>category.category.toLowerCase()=== categoryId.toLowerCase());
+    const{categoryId} = useParams();
+    const [data, setData] = useState([])
+    
+    useEffect(()=>{
+        const db = getFirestore();
+        const q = query(collection(db, "productos"), where ("category", "==", `${categoryId}`))
+        getDocs(q).then((resp) =>{
+            if(resp.size === 0){
+                console.log("no results")
+            }
+            setData(resp.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+        })
+    },[categoryId]);
     
     return (<>
         <div>
             <h2>Detalle</h2>
             <div className="container">
                 {
-                categorySelected.map((productos) =>{
-                    return <ItemList key={productos.Id} productos={productos}/>
+                data.map((productos) =>{
+                    return <ItemList key={productos.id} productos={productos}/>
                     
                 })
                 }

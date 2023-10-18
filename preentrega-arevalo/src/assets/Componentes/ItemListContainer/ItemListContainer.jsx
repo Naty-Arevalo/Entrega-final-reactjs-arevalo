@@ -1,11 +1,26 @@
 import "./ItemListContainer.css"
-import productos from "../../data/productos.json"
-import PedirDatos from "../../hooks/PedirDatos"
 import ItemList from "./itemList/ItemList"
+import { useEffect, useState } from "react"
+import {collection, getDocs,getFirestore} from "firebase/firestore"
+
 
 const ItemListContainer = () => {
 
-    const {data} = PedirDatos(productos)
+   const [data, setData] = useState([]);
+   
+
+   useEffect(()=>{
+    const db = getFirestore();
+    const itemsCollection= collection(db, "productos")
+    getDocs(itemsCollection)
+        .then((resp) =>{
+            setData(
+                resp.docs.map((doc) =>{
+                    return{...doc.data(), id: doc.id}
+                })
+            )
+        })
+    },[]);
 
     return (<>
     <div className="div-itemContainer">
