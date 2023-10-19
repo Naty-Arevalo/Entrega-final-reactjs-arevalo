@@ -2,7 +2,7 @@ import './App.css'
 import ItemListContainer from './assets/Componentes/ItemListContainer/ItemListContainer'
 import Navbar from './assets/Componentes/Navbar/Navbar'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
-import Categories from './assets/Componentes/categories/Categories'
+import Categories from './assets/Componentes/Categories/Categories'
 import CategoriesProductList from './assets/Componentes/CategoriesProductList/CategoriesProductList'
 import Home from './assets/Componentes/Home/Home'
 import CartProvider from './assets/Componentes/Context/CartContext'
@@ -11,9 +11,6 @@ import ProductDetailContainer from './assets/Componentes/ProductDetail/ProductDe
 import Checkout from './assets/Componentes/Checkout/Checkout'
 
 function App() {
-
-  
-
   return (
     <>
     <CartProvider>
@@ -30,8 +27,6 @@ function App() {
         </Routes>
       </Router>
     </CartProvider>
-
-  
     </>
   )
 }

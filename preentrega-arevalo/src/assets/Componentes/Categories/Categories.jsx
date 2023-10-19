@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const Categories = () => {
-   // const {data} = PedirDatos(categories)
     const [data, setData] = useState([]);
 
     useEffect(()=>{
@@ -19,7 +18,6 @@ const Categories = () => {
             )
         })
     },[])
-console.log(data)
     return (
     <div className="categorias">
         <h2 className="categ-title">Categorias</h2>

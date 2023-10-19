@@ -8,7 +8,6 @@ const ProductDetail = ( { item }) => {
     const [cantidad, setCantidad] = useState(1);
     const {agregarAlCarrito} = useContext(CartContext)
     
-    
     const handleIncrement = () => {
         cantidad < item.stock && setCantidad(cantidad + 1);
         };
@@ -37,11 +36,9 @@ const ProductDetail = ( { item }) => {
                 handleAgregar={()=>{agregarAlCarrito (item, cantidad)}} 
                 item={item}></ItemCount>/
             </div>
-            <p className="descripcion">"{item.descripcion}"</p>
+            <p className="descripcion">{item.descripcion}</p>
         </div>
     </div>
-    
   )
-
-  }
+}
 export default ProductDetail;

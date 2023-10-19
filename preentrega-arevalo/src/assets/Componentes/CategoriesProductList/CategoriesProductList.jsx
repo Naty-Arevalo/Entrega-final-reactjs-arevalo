@@ -30,13 +30,10 @@ const CategoriesProductList = () => {
                     
                 })
                 }
-            </div>
-            
-        </div>
-        
-    </>
-        
-      );
+            </div>            
+        </div>        
+    </>        
+        );
 }
- 
+
 export default CategoriesProductList;

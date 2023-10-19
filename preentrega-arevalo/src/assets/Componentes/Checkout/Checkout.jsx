@@ -2,6 +2,7 @@ import { useCartContext } from "../Context/CartContext";
 import { useForm } from "react-hook-form"
 import { collection, addDoc, getFirestore} from "firebase/firestore"
 import { useState } from "react";
+import "./checkout.css"
 
 function Checkout() {
     const {carrito, precioTotal, vaciarCarrito} = useCartContext();
@@ -15,12 +16,9 @@ function Checkout() {
             cliente: data,
             productos: carrito,
             total: precioTotal()
-        }
-console.log(pedido)
-    
+        }    
 
     const pedidoRef = collection(db, "pedidos")
-
     addDoc(pedidoRef, pedido)
     .then((doc) =>{
         setPedidoId(doc.id)
@@ -32,44 +30,38 @@ console.log(pedido)
 
     if(pedidoId) {
         return(
-            <div>
-            <h1>gracias por tu compra</h1>
-            
-            <p>Tu compra:</p>
-        {datosCompra && (
-          <div>
-            <p>Cliente: {datosCompra.cliente.nombre}</p>
-            <p>Email: {datosCompra.cliente.email}</p>
-            <p>Teléfono: {datosCompra.cliente.telefono}</p>
-            <p>Total: {datosCompra.total}</p>
-            
-            <p>Productos:</p>
-          <ul>
-            {datosCompra.productos.map((producto, index) => (
-              <li key={index}>
-                <p>Nombre: {producto.nombre}</p>
-                <p>Precio: {producto.precio}</p>
-                {/* Agrega otros detalles del producto según tu estructura de datos */}
-              </li>
-            ))}
-          </ul>
-            
-            <p>tu numero de pedido es: {pedidoId}</p>
+            <div className="container-check">
+              <h1 className="title-check">Gracias por tu compra!</h1>
+            {datosCompra && (
+              <div className="mini-container-check">
+                <p >{datosCompra.cliente.nombre}</p>
+                <p>{datosCompra.cliente.email}</p>
+                <br />
+                <p>Productos:</p>
+                <ul>
+                  {datosCompra.productos.map((producto, index) => (
+                    <li key={index}>
+                      <p>Nombre: {producto.nombre}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p>Pagaste: ${datosCompra.total}</p>
+                <p>TU NUMERO DE PEDIDO ES: {pedidoId}</p>
             </div>
-        )}
-        </div>
+            )}
+          </div>
         )
     }
   return (
-    <>
-        <h2>Completá tus datos para finalizar la compra</h2>
-        <form onSubmit={handleSubmit(comprar)}>
-            <input type="text" placeholder="Ingresá tu Nombre y Apellido " {...register("nombre")} />
-            <input type="email" placeholder="Ingresá tu E-Mail" {...register("email")}/>
-            <input type="phone" placeholder="Ingresá tu Telefono" {...register("telefono")}/>
-            <button type="submit">Comprar</button>
+    <div className="container-checkout">
+        <h2 className="title-form">Completá tus datos para finalizar la compra</h2>
+        <form className="form" onSubmit={handleSubmit(comprar)}>
+            <input className="btn-form" type="text" placeholder="Ingresá tu Nombre y Apellido " {...register("nombre")} />
+            <input className="btn-form" type="email" placeholder="Ingresá tu E-Mail" {...register("email")}/>
+            <input className="btn-form" type="phone" placeholder="Ingresá tu Telefono" {...register("telefono")}/>
+            <button className="btn-compra" type="submit">Comprar</button>
         </form>
-    </>
+    </div>
   )
 }
 

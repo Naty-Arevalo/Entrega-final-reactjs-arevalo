@@ -6,10 +6,9 @@ import {collection, getDocs,getFirestore} from "firebase/firestore"
 
 const ItemListContainer = () => {
 
-   const [data, setData] = useState([]);
-   
+    const [data, setData] = useState([]);
 
-   useEffect(()=>{
+    useEffect(()=>{
     const db = getFirestore();
     const itemsCollection= collection(db, "productos")
     getDocs(itemsCollection)
@@ -29,12 +28,10 @@ const ItemListContainer = () => {
         {data.map ((productos) =>{
                 return (
                     <ItemList key={productos.id} productos={productos}/>
-                      )}
+                )}
         
             )}
         </div>
-            
-                
     </div>
     
     </>)

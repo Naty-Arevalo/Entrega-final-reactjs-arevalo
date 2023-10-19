@@ -7,10 +7,8 @@ const CardWidget = () =>{
     <div>
         <AddShoppingCartIcon sx={{ color: "#1010106b"}} /> 
         <span style={{ color: "#1010106b"}}>{cantidadEnCarrito()}</span>
-
     </div>
-    </>)
-  
+    </>) 
 }
 
 export default CardWidget;

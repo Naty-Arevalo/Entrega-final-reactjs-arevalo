@@ -9,7 +9,6 @@ const ProductDetailContainer = () => {
     const [item, setItem] = useState(null);
     const { id } = useParams();
 
-
     useEffect(() => {
         const db = getFirestore();
         const docRef = doc(db, "productos", id)
@@ -20,12 +19,10 @@ const ProductDetailContainer = () => {
         
     },[id]);
 
-
     return ( <> 
-
     {item && <ProductDetail item={item} />}
     
  </> );
 }
- 
+
 export default ProductDetailContainer;
