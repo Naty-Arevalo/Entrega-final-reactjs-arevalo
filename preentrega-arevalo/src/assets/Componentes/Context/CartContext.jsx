@@ -10,6 +10,7 @@ const CartProvider = ({children}) =>{
 
     const [carrito, setCarrito] = useState(carritoInicial);
 
+    
     const agregarAlCarrito= (item, cantidad) =>{
 
         const itemAgregado = {...item, cantidad};
@@ -37,13 +38,18 @@ const CartProvider = ({children}) =>{
         setCarrito([]);
     }
 
+    const removeItem = (id) =>{
+        const deleteItem = carrito.filter(el => el.id !== id )
+        setCarrito([...deleteItem])
+    }
+   
     useEffect(()=>{
         localStorage.setItem("carrito", JSON.stringify(carrito))
     },[carrito])
 
 //Esta sintaxis siempre sera la misma al hacer un contexto
     return (
-        <CartContext.Provider value= {{carrito, agregarAlCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito}}>
+        <CartContext.Provider value= {{carrito, agregarAlCarrito, removeItem,  cantidadEnCarrito, precioTotal, vaciarCarrito}}>
             {children}
         </CartContext.Provider>
     )

@@ -3,7 +3,7 @@ import "./categoriesProductList.css"
 import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import ItemList from "../ItemListContainer/itemList/ItemList";
-
+import error from "../error"
 
 const CategoriesProductList = () => {
     const{categoryId} = useParams();
@@ -14,7 +14,7 @@ const CategoriesProductList = () => {
         const q = query(collection(db, "productos"), where ("category", "==", `${categoryId}`))
         getDocs(q).then((resp) =>{
             if(resp.size === 0){
-                console.log("no results")
+                error
             }
             setData(resp.docs.map((doc) => ({id: doc.id, ...doc.data()})))
         })

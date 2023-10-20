@@ -51,3 +51,23 @@
     font-style: italic;
     padding: 30px;
 }
+.btn-ver-carrito{
+    margin: 120px;
+    padding: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #928f88;
+    text-decoration: none;
+}
+.btn-ver-carrito:hover{
+    font-weight: 900;
+    transform: scale(1.1);
+    
+}

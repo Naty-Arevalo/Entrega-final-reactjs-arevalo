@@ -46,7 +46,7 @@ function Checkout() {
                   ))}
                 </ul>
                 <p>Pagaste: ${datosCompra.total}</p>
-                <p>TU NUMERO DE PEDIDO ES: {pedidoId}</p>
+                <p>TU NUMERO ID DE PEDIDO ES: {pedidoId}</p>
             </div>
             )}
           </div>

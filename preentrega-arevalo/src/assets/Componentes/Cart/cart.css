@@ -34,4 +34,20 @@
     transition: 0.5s;
 }
 .btn-compra:hover{
-    transform:scale(1.2) ;}
+    transform:scale(1.2) ;
+}
+.text-vacio{
+    margin-top: 90px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+.link-productos{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 40%;
+}
+
